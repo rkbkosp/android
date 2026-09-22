@@ -5,7 +5,7 @@
   <project path="device/oneplus/astonc" name="crdroidandroid/android_device_oneplus_astonc" remote="crdroid" />
   <project path="device/oneplus/sm8550-common" name="crdroidandroid/android_device_oneplus_sm8550-common" remote="crdroid" />
 
-  <project path="kernel/oneplus/sm8550" name="crdroidandroid/android_kernel_oneplus_sm8550" remote="crdroid" />
+  <project path="kernel/oneplus/sm8550" name="rkbkosp/android_kernel_oneplus_sm8550" remote="crdroid" revision="refs/heads/oplus-mm-bg" />
   <project path="kernel/oneplus/sm8550-devicetrees" name="crdroidandroid/android_kernel_oneplus_sm8550-devicetrees" remote="crdroid" />
   <project path="kernel/oneplus/sm8550-modules" name="crdroidandroid/android_kernel_oneplus_sm8550-modules" remote="crdroid" />
 
