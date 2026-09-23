@@ -15,6 +15,10 @@
 
   <!-- crDroid additions -->
   <project path="android" name="rkbkosp/android" remote="crdroid" />
+  <!-- packages/modules/common is defined by default.xml (LineageOS), so it has to
+       be removed before it can be re-pointed at the fork. -->
+  <remove-project name="LineageOS/android_packages_modules_common" />
+  <project path="packages/modules/common" name="rkbkosp/android_packages_modules_common" groups="pdk-cw-fs,pdk-fs" remote="crdroid" revision="refs/heads/16.0" />
 
   <project path="build/make" name="crdroidandroid/android_build" groups="pdk,sysui-studio" remote="crdroid" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -29,7 +33,7 @@
 
   <project path="art" name="crdroidandroid/android_art" groups="pdk" remote="crdroid" />
 
-  <project path="bionic" name="crdroidandroid/android_bionic" groups="pdk" remote="crdroid" />
+  <project path="bionic" name="rkbkosp/android_bionic" groups="pdk" remote="crdroid" revision="refs/heads/16.0" />
 
   <project path="bootable/recovery" name="crdroidandroid/android_bootable_recovery" groups="pdk" remote="crdroid" />
 
@@ -42,7 +46,7 @@
   <project path="external/wpa_supplicant_8" name="crdroidandroid/android_external_wpa_supplicant_8" groups="pdk" remote="crdroid" />
 
   <project path="frameworks/av" name="crdroidandroid/android_frameworks_av" groups="pdk,sysui-studio" remote="crdroid" />
-  <project path="frameworks/base" name="rkbkosp/android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="crdroid" revision="refs/heads/apm-shadow" />
+  <project path="frameworks/base" name="rkbkosp/android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="crdroid" revision="refs/heads/16.0" />
   <project path="frameworks/libs/systemui" name="crdroidandroid/android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="crdroid" />
   <project path="frameworks/native" name="crdroidandroid/android_frameworks_native" groups="pdk" remote="crdroid" />
   <project path="frameworks/opt/net/wifi" name="crdroidandroid/android_frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="crdroid" />
@@ -60,7 +64,7 @@
   <project path="packages/apps/AppLocker" name="crdroidandroid/android_packages_apps_AppLocker" remote="crdroid" />
   <project path="packages/apps/Backgrounds" name="crdroidandroid/android_packages_apps_Backgrounds" remote="crdroid" />
   <project path="packages/apps/ColumbusService" name="crdroidandroid/android_packages_apps_ColumbusService" remote="crdroid" />
-  <project path="packages/apps/crDroidSettings" name="crdroidandroid/android_packages_apps_crDroidSettings" remote="crdroid" />
+  <project path="packages/apps/crDroidSettings" name="rkbkosp/android_packages_apps_crDroidSettings" remote="crdroid" revision="refs/heads/16.0" />
   <project path="packages/apps/Dialer" name="crdroidandroid/android_packages_apps_Dialer" groups="pdk-fs" remote="crdroid" />
   <project path="packages/apps/DocumentsUI" name="crdroidandroid/android_packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="crdroid" />
   <project path="packages/apps/FaceUnlock" name="crdroidandroid/android_packages_apps_FaceUnlock" remote="crdroid-gitlab" />
@@ -72,15 +76,15 @@
   <project path="packages/apps/Messaging" name="crdroidandroid/android_packages_apps_Messaging" groups="pdk-fs" remote="crdroid" />
   <project path="packages/apps/OmniStyle" name="crdroidandroid/android_packages_apps_OmniStyle" remote="crdroid" />
   <project path="packages/apps/Sandbox" name="crdroidandroid/android_packages_apps_Sandbox" remote="crdroid" />
-  <project path="packages/apps/Settings" name="crdroidandroid/android_packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="crdroid" />
+  <project path="packages/apps/Settings" name="rkbkosp/android_packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="crdroid" revision="refs/heads/16.0" />
   <project path="packages/apps/SettingsIntelligence" name="crdroidandroid/android_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="crdroid" />
   <project path="packages/apps/SetupWizard" name="crdroidandroid/android_packages_apps_SetupWizard" remote="crdroid" />
   <project path="packages/apps/ThemePicker" name="crdroidandroid/android_packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="crdroid" />
   <project path="packages/apps/ThemeStore" name="crdroidandroid/android_packages_apps_ThemeStore" remote="crdroid" />
-  <project path="packages/apps/Updater" name="crdroidandroid/android_packages_apps_Updater" remote="crdroid" />
+  <project path="packages/apps/Updater" name="rkbkosp/android_packages_apps_Updater" remote="crdroid" revision="refs/heads/16.0" />
   <project path="packages/apps/WallpaperPicker2" name="crdroidandroid/android_packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="crdroid" />
   <project path="packages/inputmethods/LatinIME" name="crdroidandroid/android_packages_inputmethods_LatinIME" groups="pdk-fs" remote="crdroid" />
-  <project path="packages/modules/Bluetooth" name="crdroidandroid/android_packages_modules_Bluetooth" groups="pdk" remote="crdroid" />
+  <project path="packages/modules/Bluetooth" name="rkbkosp/android_packages_modules_Bluetooth" groups="pdk" remote="crdroid" revision="refs/heads/16.0" />
   <project path="packages/modules/Connectivity" name="crdroidandroid/android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="crdroid" />
   <project path="packages/modules/Permission" name="crdroidandroid/android_packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="crdroid" />
   <project path="packages/modules/Wifi" name="crdroidandroid/android_packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="crdroid" />
@@ -92,14 +96,14 @@
   <project path="packages/services/Telephony" name="crdroidandroid/android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="crdroid" />
 
   <project path="system/core" name="crdroidandroid/android_system_core" groups="pdk" remote="crdroid" />
-  <project path="system/sepolicy" name="crdroidandroid/android_system_sepolicy" groups="pdk" remote="crdroid" />
+  <project path="system/sepolicy" name="rkbkosp/android_system_sepolicy" groups="pdk" remote="crdroid" revision="refs/heads/16.0" />
   <project path="system/memory/libmeminfo" name="crdroidandroid/android_system_memory_libmeminfo" groups="pdk" remote="crdroid" />
   <project path="system/update_engine" name="crdroidandroid/android_system_update_engine" groups="pdk" remote="crdroid" />
   <project path="system/vold" name="crdroidandroid/android_system_vold" groups="pdk" remote="crdroid" />
 
   <project path="vendor/addons" name="crdroidandroid/android_vendor_addons" remote="crdroid" />
   <project path="vendor/certification" name="crdroidandroid/android_vendor_certification" remote="crdroid" />
-  <project path="vendor/crDroidOTA" name="crdroidandroid/android_vendor_crDroidOTA" remote="crdroid" />
+  <project path="vendor/crDroidOTA" name="rkbkosp/android_vendor_crDroidOTA" remote="crdroid" revision="refs/heads/16.0" />
   <project path="vendor/lineage" name="crdroidandroid/android_vendor_crdroid" remote="crdroid" />
   <project path="vendor/themes" name="crdroidandroid/android_vendor_themes" remote="crdroid" />
 
